@@ -1,8 +1,8 @@
-import { AlbumController, ArtistController, SearchController, SongController } from '../src/modules/index'
-import { PlaylistController } from '../src/modules/playlists/controllers'
-import { App } from '../src/app'
+import { AlbumController, ArtistController, SearchController, SongController } from '../dist/modules/index.js'
+import { PlaylistController } from '../dist/modules/playlists/controllers/index.js'
+import { App } from '../dist/app.js'
 
-const honoApp = new App([
+const app = new App([
   new SearchController(),
   new SongController(),
   new AlbumController(),
@@ -10,4 +10,4 @@ const honoApp = new App([
   new PlaylistController()
 ]).getApp()
 
-export default honoApp
+export default app
